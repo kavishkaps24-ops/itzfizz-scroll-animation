@@ -1,0 +1,416 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f0e8;
+  color: #111;
+}
+
+.page {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 80px;
+
+  padding: 0 6vw;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 100;
+  mix-blend-mode: difference;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 8vw 80px;
+
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+
+  width: 60%;
+
+  z-index: 10;
+}
+
+.small-text {
+  font-size: 13px;
+  letter-spacing: 4px;
+
+  margin-bottom: 25px;
+
+  opacity: 0.6;
+}
+
+h1 {
+  font-size: clamp(55px, 9vw, 145px);
+
+  line-height: 0.9;
+  letter-spacing: -5px;
+
+  font-weight: 800;
+
+  margin-bottom: 35px;
+}
+
+.description {
+  max-width: 430px;
+
+  font-size: 18px;
+  line-height: 1.6;
+
+  opacity: 0.7;
+}
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats {
+  display: flex;
+
+  gap: 70px;
+
+  margin-top: 55px;
+}
+
+.stat h2 {
+  font-size: 40px;
+
+  margin-bottom: 5px;
+}
+
+.stat p {
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  opacity: 0.6;
+}
+
+/* =========================
+   VISUAL
+========================= */
+
+.visual-wrapper {
+  position: absolute;
+
+  right: 8%;
+  top: 25%;
+
+  width: 420px;
+  height: 420px;
+
+  z-index: 5;
+}
+
+.visual {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+/* ORANGE CIRCLE */
+
+.visual-circle {
+  position: absolute;
+
+  width: 340px;
+  height: 340px;
+
+  border-radius: 50%;
+
+  background: #ff5c35;
+
+  top: 30px;
+  left: 30px;
+
+  box-shadow:
+    0 30px 80px rgba(255, 92, 53, 0.25);
+}
+
+/* OUTER RING */
+
+.visual-ring {
+  position: absolute;
+
+  width: 390px;
+  height: 390px;
+
+  border-radius: 50%;
+
+  border: 2px solid #111;
+
+  top: 5px;
+  left: 5px;
+
+  opacity: 0.25;
+}
+
+/* BLACK CARD */
+
+.visual-card {
+  position: absolute;
+
+  width: 220px;
+  height: 280px;
+
+  top: 90px;
+  left: 100px;
+
+  background: #111;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  transform: rotate(-12deg);
+
+  box-shadow: 20px 25px 0 #d8d0c3;
+
+  z-index: 5;
+}
+
+.visual-card span {
+  font-size: 35px;
+
+  letter-spacing: 8px;
+}
+
+.visual-card strong {
+  font-size: 45px;
+
+  letter-spacing: 5px;
+}
+
+/* =========================
+   FLOATING DOTS
+========================= */
+
+.floating-dot {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: #111;
+
+  z-index: 10;
+}
+
+.dot-one {
+  top: 30px;
+  right: 40px;
+}
+
+.dot-two {
+  bottom: 50px;
+  left: 20px;
+
+  width: 12px;
+  height: 12px;
+}
+
+.dot-three {
+  bottom: 10px;
+  right: 90px;
+
+  width: 25px;
+  height: 25px;
+
+  background: #ff5c35;
+}
+
+/* =========================
+   SCROLL INDICATOR
+========================= */
+
+.scroll-text {
+  position: absolute;
+
+  bottom: 40px;
+  left: 8vw;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  opacity: 0.6;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.scroll-text span {
+  font-size: 22px;
+}
+
+/* =========================
+   SECOND SECTION
+========================= */
+
+.about-section {
+  min-height: 100vh;
+
+  padding: 150px 8vw;
+
+  background: #111;
+
+  color: white;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.about-section p {
+  font-size: 13px;
+
+  letter-spacing: 4px;
+
+  opacity: 0.5;
+
+  margin-bottom: 30px;
+}
+
+.about-section h2 {
+  font-size: clamp(50px, 8vw, 120px);
+
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 120px 6vw 80px;
+
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 15vw;
+  }
+
+  .visual-wrapper {
+    opacity: 0.35;
+
+    right: -120px;
+
+    top: 40%;
+  }
+
+  .stats {
+    gap: 30px;
+  }
+
+  .stat h2 {
+    font-size: 30px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  h1 {
+    font-size: 16vw;
+
+    letter-spacing: -2px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .stats {
+    gap: 20px;
+  }
+
+  .stat h2 {
+    font-size: 25px;
+  }
+
+  .stat p {
+    font-size: 10px;
+  }
+
+  .visual-wrapper {
+    right: -220px;
+  }
+
+}
